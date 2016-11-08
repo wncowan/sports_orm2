@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Show {{team}}</title>
+	</head>
+	<body>
+		<h1>{{team}}</h1>
+		<h3>{{team.league}}</h3>
+		<strong>Current Players:</strong>
+		<ul>
+			{% for player in team.curr_players.all|dictsort:"last_name" %}
+				<li><a href="{% url 'show_player' player.id %}">{{player}}</a></li>
+			{% empty %}
+				<li>No one!</li>
+			{% endfor %}
+		</ul>
+		<strong>Former Players:</strong>
+		<ul>
+			{% for player in team.past_players.all|dictsort:"last_name" %}
+				<li><a href="{% url 'show_player' player.id %}">{{player}}</a></li>
+			{% empty %}
+				<li>No one!</li>
+			{% endfor %}
+		</ul>
+		<p><a href="{% url 'index' %}">Home</a></p>
+	</body>
+</html>

@@ -1,0 +1,44 @@
+Questions:
+
+Simple finds
+
+1. Find all baseball leagues
+2. Find all womens' leagues
+3. Find all leagues where sport is any type of hockey
+4. Find all leagues where sport is something OTHER THAN football
+5. Find all leagues that call themselves "conferences"
+6. Find all leagues in the Atlantic region
+
+7. Find all teams based in Dallas
+8. Find all teams named the Raptors
+9. Find all teams whose location includes "City"
+10. Find all teams whose names begin with "T"
+11. Return all teams, ordered alphabetically by location
+12. Return all teams, ordered by team name in reverse alphabetical order
+
+13. Find every player with last name "Cooper"
+14. Find every player with first name "Joshua"
+15. Find every player with last name "Cooper" EXCEPT FOR Joshua
+16. Find all players with first name "Alexander" OR first name "Wyatt"
+
+ForeignKey Relationships
+
+1. Find all teams in the Atlantic Soccer Conference
+2. Find all (current) players on the Boston Penguins
+3. Find all (current) players in the International Collegiate Baseball Conference
+4. Find all (current) players in the American Conference of Amateur Football with last name "Lopez"
+5. Find all football players
+6. Find all teams with a (current) player named "Sophia"
+7. Find all leagues with a (current) player named "Sophia"
+8. Find everyone with the last name "Anderson" who DOESN'T (currently) play for the Phoenix Rays
+9. Show players, sorted by the number of teams they've played for
+
+
+ManyToMany Relationships
+
+1. All teams, past and present, that Samuel Evans has played with
+2. All players, past and present, with the Manitoba Tiger Cats
+3. All players who were formerly (but aren't currently) with the Wichita Vikings
+4. Every team that Jacob Gray played for before he joined the Oregon Colts
+5. Everyone named "Joshua" who has ever played in the Atlantic Federation of Amateur Baseball Players
+6. All teams that have had 12 or more players, past and present.  HINT: Look up the Django `annotate` function.
