@@ -1,42 +1,32 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title></title>
-		<style type="text/css">
-			.header_row{
-				border: 2px solid red;
-			}
-
-			.row2{
-				background-color: #CCCCCC;
-			}
-		</style>
+		<title>Sports Leagues</title>
 	</head>
 	<body>
-		<table>
+		<h1>Leagues</h1>
+		<ol>
 			{% for league in leagues %}
-				<tr>
-					<th colspan="2" class="header_row"><h3>{{league}}</h3></th>
-				</tr>
-				{% for team in league.teams.all|dictsort:"location" %}
-					<tr class="{% cycle 'row1' 'row2' %}">
-						<td><strong><a href="{% url 'show_team' team.id %}">{{team}}</a></strong></td>
-						<td>
-							<ul>
-								{% for player in team.curr_players.all|dictsort:"last_name" %}
-									<li><a href="{% url 'show_player' player.id %}">{{player}}</a></li>
-								{% endfor %}
-							</ul>
-						</td>
-					</tr>
-				{% endfor %}
+				<li>{{league.name}}</li>
 			{% empty %}
 				<p>No leagues found.  Try <code>python manage.py loaddata data.json</code>, or, if that doesn't work, going <a href="{% url 'make_data' %}">here</a> (but be prepared to wait).</p>
 			{% endfor %}
-		</table>
-		Teams:
-		{% for team in special|dictsort:"all_players__count" reversed %}
-			<p><a href="{% url 'show_team' team.id %}">{{team}}</a> {{team.all_players__count}}</p>
-		{% endfor %}
+		</ol>
+		<h1>Teams</h1>
+		<ol>
+			{% for team in teams %}
+				<li>{{team.location}} {{team.team_name}}</li>
+			{% empty %}
+				<p>No teams found.  Try <code>python manage.py loaddata data.json</code>, or, if that doesn't work, going <a href="{% url 'make_data' %}">here</a> (but be prepared to wait).</p>
+			{% endfor %}
+		</ol>
+		<h1>Players</h1>
+		<ol>
+			{% for player in players %}
+				<li>{{player.first_name}} {{player.last_name}}</li>
+			{% empty %}
+				<p>No teams found.  Try <code>python manage.py loaddata data.json</code>, or, if that doesn't work, going <a href="{% url 'make_data' %}">here</a> (but be prepared to wait).</p>
+			{% endfor %}
+		</ol>
 	</body>
 </html>
