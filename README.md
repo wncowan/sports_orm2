@@ -4,8 +4,10 @@
 
 When you `python manage.py runserver` and naviate to localhost:8000, you should see a list of leagues, teams, and players.  Modify `apps/leagues/views.py` and/or `apps/leagues/templates/leagues/index.html` to change the displayed list.
 
+####Questions:
+
 [Simple finds](level_1.md)
 
-ForeignKey relationships
+[ForeignKey relationships](level_2.md)
 
-ManyToMany relationships
+[ManyToMany relationships](level_3.md)
