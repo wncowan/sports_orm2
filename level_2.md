@@ -8,4 +8,3 @@
 6. Find all teams with a (current) player named "Sophia"
 7. Find all leagues with a (current) player named "Sophia"
 8. Find everyone with the last name "Anderson" who DOESN'T (currently) play for the Phoenix Rays
-9. Show players, sorted by the number of teams they've played for
