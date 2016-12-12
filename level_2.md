@@ -7,4 +7,4 @@
 5. Find all football players
 6. Find all teams with a (current) player named "Sophia"
 7. Find all leagues with a (current) player named "Sophia"
-8. Find everyone with the last name "Anderson" who DOESN'T (currently) play for the Phoenix Rays
+8. Find everyone with the last name "Flores" who DOESN'T (currently) play for the Washington Roughriders
