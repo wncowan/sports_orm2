@@ -6,9 +6,9 @@ from . import team_maker
 def index(request):
 	context = {
 		"leagues": League.objects.all(),
-		"teams": Team.objects.all(),
-		"players": Player.objects.all(),
-	}
+		"teams": Team.objects.raw("SELECT * FROM leagues_Team WHERE location = 'Dallas'"),
+		"players": Player.objects.filter(first_name="Alexander")|Player.objects.filter(first_name="Wyatt")
+		}	
 	return render(request, "leagues/index.html", context)
 
 def make_data(request):
